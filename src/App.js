@@ -88,7 +88,7 @@ class App extends Component {
       <div>
         <ImageLinkForm onInput={this.onInputChange} onSubmit={this.onSubmit}/>
         <ImageOutput imageUrl={this.state.imageURL}/>
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center mt-3'>
           <ColorOutput colors={this.state.colors}/>
         </div>
       </div>
