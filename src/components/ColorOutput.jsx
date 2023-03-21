@@ -7,7 +7,7 @@ const ColorOutput = ({ colors }) => {
             <div className="flex flex-row justify-arounds bg-gray-200 rounded-lg">{colors.map((e, i) => (
                 <div className="bg-white h-32 m-2 rounded">
                     <div style={{backgroundColor: e}} className="w-full h-2/3 rounded" key={i}>‎</div>
-                    <div className="p-1" key={i}>HEX: {e}</div>
+                    <div className="p-1 text-sm" key={i + 10}>HEX: {e}</div>
                 </div>
                  )) }
             </div>
