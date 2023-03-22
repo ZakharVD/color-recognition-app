@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/color-recognition-app/static/css/main.c144f050.css",
-    "main.js": "/color-recognition-app/static/js/main.0730180b.js",
+    "main.css": "/color-recognition-app/static/css/main.88161b03.css",
+    "main.js": "/color-recognition-app/static/js/main.8b1f6ac0.js",
     "static/js/787.a9c67165.chunk.js": "/color-recognition-app/static/js/787.a9c67165.chunk.js",
     "index.html": "/color-recognition-app/index.html",
-    "main.c144f050.css.map": "/color-recognition-app/static/css/main.c144f050.css.map",
-    "main.0730180b.js.map": "/color-recognition-app/static/js/main.0730180b.js.map",
+    "main.88161b03.css.map": "/color-recognition-app/static/css/main.88161b03.css.map",
+    "main.8b1f6ac0.js.map": "/color-recognition-app/static/js/main.8b1f6ac0.js.map",
     "787.a9c67165.chunk.js.map": "/color-recognition-app/static/js/787.a9c67165.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c144f050.css",
-    "static/js/main.0730180b.js"
+    "static/css/main.88161b03.css",
+    "static/js/main.8b1f6ac0.js"
   ]
 }
