@@ -3,6 +3,7 @@ import './App.css';
 import ImageLinkForm from './components/ImageLinkForm';
 import ImageOutput from './components/ImageOutput';
 import ColorOutput from './components/ColorOutput';
+import ErrorComp from './components/ErrorComp';
 
 
 const clarifaiRequest = (imageUrl) => {
@@ -48,7 +49,8 @@ class App extends Component {
       input: '',
       imageURL: '',
       colors: [],
-      colorsCode: []
+      colorsCode: [],
+      route: 'home'
     }
   }
 
@@ -78,9 +80,12 @@ class App extends Component {
     fetch(`https://api.clarifai.com/v2/models/color-recognition/outputs`, clarifaiRequest(this.state.input))
       .then(response => response.json())
       .then((result) => {
-        this.colorChange(this.displayColors(result.outputs[0].data.colors))
+        this.colorChange(this.displayColors(result.outputs[0].data.colors));
+        this.setState({route: 'home'})
       })
-      .catch(error => console.log('error', error));
+      .catch(() => {
+        this.setState({route: 'error'})
+      });
   }
 
 
@@ -88,10 +93,15 @@ class App extends Component {
     return (
       <div>
         <ImageLinkForm onInput={this.onInputChange} onSubmit={this.onSubmit}/>
-        <ImageOutput imageUrl={this.state.imageURL}/>
-        <div className='flex justify-center mt-3'>
-          <ColorOutput colors={this.state.colors}/>
-        </div>
+        { this.state.route === 'error'
+          ? <ErrorComp/>
+          : <div>
+              <ImageOutput imageUrl={this.state.imageURL}/>
+              <div className='flex justify-center mt-3'>
+                <ColorOutput colors={this.state.colors}/>
+              </div>
+            </div>
+          }
       </div>
     );
   }
