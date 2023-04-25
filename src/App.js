@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import ImageLinkForm from './components/ImageLinkForm';
 import ImageOutput from './components/ImageOutput';
 import ColorOutput from './components/ColorOutput';
